@@ -38,19 +38,18 @@ img {
 input {
   height: 23px;
   width: 350px;
-  text-align: center;
   margin-left: 350px;
   margin-right: 20px;
   border: 2px solid white;
-  padding: 5px;
+  padding: 7px;
   border-radius: 30px;
   color: white;
   background-color: transparent;
   background-repeat: no-repeat;
-
   cursor: pointer;
   overflow: hidden;
   outline: none;
+  font-size: 17px;
 }
 
 button {
@@ -61,13 +60,57 @@ button {
   cursor: pointer;
   overflow: hidden;
   outline: none;
+  margin-top: 35px;
 }
 
 img {
   width: 80px;
 }
 
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+
 #weat {
-  font-size: 30px;
+  font-size: 40px;
   margin-left: 10px;
+  font-weight: bolder;
+}
+
+#feels {
+  width: 55px;
+  height: 55px;
+}
+
+#side-div {
+  display: flex;
+  width: 250px;
+  height: 70px; /* Adjust the height as needed */
+  align-items: flex-start; /* Center items horizontally */
+  justify-content: flex-start; /* Align items to the start vertically */
+  margin-top: 20px;
+
+
+}
+#feelsLike {
+  align-self: flex-start;
+  justify-content: flex-start;
+}
+.temp{
+  margin-left: 20px;
+  margin-top: 19px;
+  font-size: 20px;
+}
+/*
+
+#side-div {
+  display: flex;
+  background-color: gold;
+  width: 250px;
+  height: 70px;
+  align-items: flex-start;
+}
+#feelsLike {
+  align-self: flex-start;
 }
