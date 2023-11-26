@@ -6,6 +6,7 @@ const locationName = document.getElementById("locationName");
 const placeName = document.getElementById("placeName");
 const temp = document.getElementById("temp");
 const ha = document.getElementById("humidity");
+const weather = document.getElementById("weather-11");
 
 // Main Function
 async function getWeather() {
@@ -29,6 +30,9 @@ async function getWeather() {
   ha.textContent = humidity + "%";
   console.log(humidity + "%");
 
+  const weatherDescription = weatherData.weather[0].main;
+  weather.textContent = weatherDescription;
+  console.log(weatherDescription);
   inputValue();
   input.value = "";
 }

@@ -1,0 +1,106 @@
+* {
+  font-family: "AR One Sans", sans-serif;
+  font-family: "Dosis", sans-serif;
+  font-family: "Nunito", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Main Div */
+html {
+  background-image: url(bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+}
+#main {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+  margin-top: 30px;
+}
+
+#value,
+#btn {
+  font-size: 17px;
+  padding: 8px;
+  border-radius: 75px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: white;
+}
+
+#value {
+  border: 1px solid white;
+  width: 250px;
+}
+
+#btn {
+  margin-left: 10px;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+#clouds,
+#feels {
+  width: 55px;
+}
+
+#humid {
+  width: 50px;
+}
+
+#main-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 230px;
+  margin-left: auto;
+  border: 2px solid white;
+  margin-right: 50px;
+  margin-top: 50px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 900;
+}
+
+#main-div > div {
+  padding: 10px;
+}
+
+#weather-11 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+h2 {
+  margin-left: 10px;
+}
+
+#temp {
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+#humidity {
+  margin-left: 0px;
+  margin-top: 13px;
+}
+#ha {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 12px;
+}
+
+#locationName,
+#side-div,
+#HumidA {
+  display: flex;
+  margin: 15px;
+}
