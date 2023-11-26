@@ -4,14 +4,8 @@ const currentWeather = document.getElementById("weat");
 const mainDiv = document.getElementById("main-div");
 const locationName = document.getElementById("locationName");
 const placeName = document.getElementById("placeName");
-
-const LatitudeValue = [{}];
-const LongitudeValue = [{}];
-
-// Text Value
-function inputValue() {
-  placeName.textContent = input.value;
-}
+const temp = document.getElementById("temp");
+const ha = document.getElementById("humidity");
 
 // Main Function
 async function getWeather() {
@@ -22,17 +16,21 @@ async function getWeather() {
     }
   );
   const weatherData = await response.json();
+  console.log(weatherData);
+  // Feels Like
+  const feelLike = celsius(weatherData.main.feels_like);
+  temp.textContent = Math.round(feelLike) + "°";
+
+  // Main temp
   const cel = celsius(weatherData.main.temp);
   currentWeather.textContent = Math.round(cel) + "°";
-  locationName.appendChild(currentWeather);
+
+  const humidity = weatherData.main.humidity;
+  ha.textContent = humidity + "%";
+  console.log(humidity + "%");
 
   inputValue();
   input.value = "";
-}
-
-// converting to celsius
-function celsius(value) {
-  return value - 273.15;
 }
 
 // Longitude and Latitude
@@ -58,31 +56,23 @@ async function longitude() {
         }
       );
       const fore = await response.json();
-      console.log(fore);
+      // console.log(fore);
     }
     foreCastDate();
-
-    //LatitudeValue.push(latitude);
-    //LongitudeValue.push(longitude);
-    // console.log(`Latitude of ${input.value}`, LatitudeValue);
-    // console.log(`Longitude of ${input.value}`, LongitudeValue);
   } catch (error) {
     console.error("Error fetching location data:", error);
   }
 }
 
+// converting to celsius
+function celsius(value) {
+  return value - 273.15;
+}
+
+// Text Value
+function inputValue() {
+  placeName.textContent = input.value;
+}
+
 btn.addEventListener("click", getWeather);
 btn.addEventListener("click", longitude);
-/*
-async function foreCastDate() {
-  const response = await fetch(
-    `http://api.openweathermap.org/data/2.5/forecast?lat=${LatitudeValue}&lon=${LongitudeValue}&appid=e1db4f466c1ed08bb54b95cb19cfbe03
-    `,
-    {
-      mode: "cors",
-    }
-  );
-  const fore = await response.json();
-  console.log(fore);
-}
-*/

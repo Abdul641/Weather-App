@@ -78,7 +78,8 @@ img {
   font-weight: bolder;
 }
 
-#feels {
+#feels,
+#humid {
   width: 55px;
   height: 55px;
 }
@@ -90,27 +91,23 @@ img {
   align-items: flex-start; /* Center items horizontally */
   justify-content: flex-start; /* Align items to the start vertically */
   margin-top: 20px;
-
-
 }
-#feelsLike {
+#feelsLike,
+#ha {
   align-self: flex-start;
   justify-content: flex-start;
 }
-.temp{
-  margin-left: 20px;
-  margin-top: 19px;
+#temp,
+#humidity {
+  margin-left: 10px;
+  margin-top: 18px;
   font-size: 20px;
+  font-weight: bolder;
 }
-/*
 
-#side-div {
-  display: flex;
-  background-color: gold;
-  width: 250px;
-  height: 70px;
-  align-items: flex-start;
+#ha {
+  margin-left: 15px;
 }
-#feelsLike {
-  align-self: flex-start;
+#HumidA {
+  display: flex;
 }
