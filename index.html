@@ -26,33 +26,52 @@
         <i class="fa-solid fa-magnifying-glass" id="btn-image"></i>
       </button>
     </div>
+    <p id="error"></p>
+    <p id="date"></p>
 
-    <!--   https://api.openweathermap.org/data/2.5/weather?q=Dundalk&appid=e1db4f466c1ed08bb54b95cb19cfbe03 -->
-    <div id="main-div">
-      <h2 id="placeName"></h2>
+    <div id="center-div">
+      <div id="left-side">
+        <div id="visi">
+          <img src="MaxTemp.svg" alt="" id="max" />
+          <h3 id="Visibility-1">Max Temp</h3>
+          <p id="Visibility"></p>
+        </div>
 
-      <div id="locationName">
-        <img src="cloud.svg" alt="Weather Image" id="clouds" />
-        <h3 id="weather-11"></h3>
-        <h3 id="weat"></h3>
+        <div id="min">
+          <img src="low-temperature-reading-svgrepo-com.svg" alt="" />
+          <h3 id="min">Min Temp</h3>
+          <p id="min-1"></p>
+        </div>
       </div>
 
-      <!-- Side Bar-->
-      <div id="side-div">
-        <!-- Feels Like-->
-        <img src="feels.svg" alt="Feels Like Image" id="feels" />
-        <h3 id="feelsLike">Feels Like</h3>
-        <p id="temp"></p>
+      <div id="place-dic">
+        <h1 id="placeName"></h1>
       </div>
 
-      <div id="HumidA">
-        <!-- Humidity -->
-        <img src="Humidity.svg" alt="Humidity" id="humid" />
-        <h3 id="ha">Humidity</h3>
-        <p id="humidity"></p>
+      <div id="main-div">
+        <div id="locationName">
+          <img src="cloud.svg" alt="Weather Image" id="clouds" />
+          <h3 id="weather-11"></h3>
+          <h3 id="weat"></h3>
+        </div>
+
+        <!-- Side Bar-->
+        <div id="side-div">
+          <!-- Feels Like-->
+          <img src="feels.svg" alt="Feels Like Image" id="feels" />
+          <h3 id="feelsLike">Feels Like</h3>
+          <p id="temp"></p>
+        </div>
+
+        <div id="HumidA">
+          <!-- Humidity -->
+          <img src="Humidity.svg" alt="Humidity" id="humid" />
+          <h3 id="ha">Humidity</h3>
+          <p id="humidity"></p>
+        </div>
       </div>
     </div>
-
+    <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone.min.js"></script> -->
     <script src="script.js"></script>
   </body>
 </html>

@@ -3,6 +3,7 @@
   font-family: "Dosis", sans-serif;
   font-family: "Nunito", sans-serif;
   font-family: "Roboto", sans-serif;
+  color: white;
 }
 
 /* Main Div */
@@ -18,6 +19,11 @@ html {
   justify-content: center;
   margin: 15px;
   margin-top: 30px;
+}
+
+#error {
+  text-align: center;
+  font-size: 18px;
 }
 
 #value,
@@ -62,11 +68,11 @@ html {
   flex-direction: column;
   justify-content: flex-end;
   width: 230px;
-  margin-left: auto;
+  margin-left: 55px;
   border: 2px solid white;
   margin-right: 50px;
   margin-top: 50px;
-  border-radius: 20px;
+  border-radius: 15px;
   color: white;
   font-weight: 900;
 }
@@ -79,13 +85,12 @@ html {
   margin-left: 10px;
   margin-right: 10px;
 }
-h2 {
-  margin-left: 10px;
-}
 
-#temp {
+#temp,
+#Visibility {
   margin-left: 10px;
   margin-top: 20px;
+  font-size: 20px;
 }
 
 #humidity {
@@ -97,10 +102,45 @@ h2 {
   margin-right: 10px;
   margin-top: 12px;
 }
+p#min-1 {
+  margin-left: 10px;
+  margin-top: 15px;
+  font-size: 20px;
+}
 
 #locationName,
 #side-div,
 #HumidA {
   display: flex;
   margin: 15px;
+}
+#center-div {
+  display: flex;
+}
+#left-side {
+  width: 210px;
+  border: 2px solid white;
+  color: white;
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-left: 50px;
+  padding: 10px;
+  border-radius: 15px;
+}
+#visi,
+#min {
+  display: flex;
+}
+#min {
+  margin-top: 15px;
+}
+#placeName {
+  text-decoration: underline;
+  font-size: 40px;
+}
+#place-dic {
+  text-align: center;
+  width: 55%;
+  border-radius: 15px;
+  height: 75px;
 }
