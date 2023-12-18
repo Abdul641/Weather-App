@@ -98,33 +98,5 @@ function metersToMiles(meters) {
   return meters * 0.000621371;
 }
 
-function getDate() {
-  const location = input.value;
-  if (!location) {
-    alert("Please enter a location");
-    return;
-  }
-
-  fetch(
-    `https://api.openweathermap.org/geo/1.0/direct?q=${location}&appid=e1db4f466c1ed08bb54b95cb19cfbe03`
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      const lat = data[0].lat;
-      const lon = data[0].lon;
-
-      fetch(
-        `https://api.timezonedb.io/v/timezone?lat=${lat}&lng=${lon}&apikey=792ILS4CXQX4`
-      )
-        .then((response) => response.json())
-        .then((data) => {
-          const dateTime = new Date(data.datetime);
-          const formattedDateTime = dateTime.toLocaleString();
-          //  dateTimeDisplay.textContent = `Current date and time in ${location}: ${formattedDateTime}`;
-          alert(`Current date and time in ${location}: ${formattedDateTime}`);
-        });
-    });
-}
-btn.addEventListener("click", getDate);
 btn.addEventListener("click", getWeather);
 btn.addEventListener("click", longitude);
